@@ -1,0 +1,34 @@
+<div class="coupon-header">
+    <img [src]="couponBox.couponBox.imageUrl">
+    <h1 class="mat-headline">{{couponBox.couponBox.title}}</h1>
+</div>
+<div class="coupon-content">
+    <div class="left-card mat-elevation-z8">
+        <mat-card-content>
+          <div>
+            <p class="mat-subheading-1">
+                {{couponBox.couponBox.description}}<br>
+                <br>Qué contiene:
+            </p>
+            <mat-list role="list">
+                <mat-list-item *ngFor="let coupon of couponBox.coupons" role="listitem">{{coupon.quantity}} {{coupon.title}}</mat-list-item>
+            </mat-list>
+            <p>{{couponBox.couponBox.detail}}</p>
+          </div>
+        </mat-card-content>
+    </div>
+    <div class="right-card mat-elevation-z8">
+        <div class="promo-header">
+            <div class="price">
+                <span>{{couponBox.couponBox.price | currency}}</span>
+            </div>
+            <img [src]="couponBox.business.logoUrl">
+        </div>
+        <div class="promo-info" >
+            <h3>{{couponBox.business.name}}</h3>
+            <p>{{couponBox.category.name}}</p>
+        </div>
+        
+        <button mat-button color="primary">Comprar</button>
+    </div>
+</div>

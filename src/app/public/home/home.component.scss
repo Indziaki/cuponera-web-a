@@ -1,0 +1,132 @@
+
+.about {
+    padding: 3.125rem 0;
+    background: #090909 url("https://img.pngio.com/piggy-bank-png-piggy-banks-png-1036_791.png") no-repeat;
+    background-size: 90%;
+    background-position: left -6.25rem bottom -9.375rem;
+    height: 100%;
+    color: white;
+}
+@media print, screen and (min-width: 40em) {
+    .about {
+        padding-bottom: 6.25rem;
+        height: 80%;
+        background-position: 50% -350%;
+    }
+}
+@media print, screen and (min-width: 64em) {
+    .about {
+        padding: 6.25rem 0;
+        background-position: 100% 20%;
+        background-size: 45%;
+    }
+}
+@media screen and (max-width: 39.9375em) and (orientation: landscape) {
+    .about {
+        height: 28.125rem;
+        background-size: 60%;
+        background-position: left -50px bottom -150px;
+    }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) and (orientation: portrait) {
+    .about {
+        height: 31.25rem;
+        background-size: 70%;
+        background-position: -30% 240%;
+        background-position: left -150px bottom -250px;
+    }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) and (orientation: landscape) {
+    .about {
+        height: 31.25rem;
+        background-size: 70%;
+        background-position: -30% 240%;
+        background-position: left -150px bottom -250px;
+    }
+}
+@media screen and (min-width: 64em) and (max-width: 74.9375em) and (orientation: portrait) {
+    .about {
+        background-size: 70%;
+        background-position: right -150px bottom 40%;
+    }
+}
+@media screen and (min-width: 64em) and (max-width: 74.9375em) and (orientation: landscape) {
+    .about {
+        background-size: 70%;
+        background-position: right -150px bottom 40%;
+    }
+}
+@media screen and (min-width: 75em) and (max-width: 89.9375em) and (orientation: landscape) {
+    .about {
+        background-size: 60%;
+        background-position: right -150px bottom 40%;
+    }
+}
+.about .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.about .container .about-content {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    min-height: 0px;
+    min-width: 0px;
+    width: calc(100% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+}
+@media print, screen and (min-width: 64em) {
+    .about .container .about-content {
+        width: calc(42.85714% - 1.875rem);
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}
+@media print, screen and (min-width: 64em) {
+    .about .container .about-content {
+        padding-top: 0rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 1rem !important;
+    }
+}
+.about .container .about-content p {
+    text-align: center;
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .about .container .about-content p {
+        padding: 0 3.125rem;
+    }
+}
+@media print, screen and (min-width: 40em) {
+    .about .container .about-content p {
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+}
+.about .container .about-content img.signature {
+    display: block;
+    float: right;
+}
+@media screen and (max-width: 39.9375em) {
+    .about .container .about-content img.signature {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 39.9375em) and (orientation: landscape) {
+    .about .container .about-content img.signature {
+        margin-top: 2.5rem;
+        width: 30%;
+    }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .about .container .about-content img.signature {
+        width: 9.375rem;
+    }
+}

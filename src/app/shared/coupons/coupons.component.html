@@ -1,0 +1,23 @@
+<div class="section-header">
+    <h1 align="center" class="mat-headline">Cuponeras</h1>
+    <section>
+        <div>
+            <button (click)="filterCat(null)" class="category-select" mat-button>Todas</button>
+          <button *ngFor="let cat of categories" (click)="filterCat(cat)" class="category-select" mat-button>{{cat.name}}</button>
+        </div>
+    </section>
+</div>
+<div class="specials-content">
+    <div *ngFor="let a of groupsFiltered; let i = index" [className]="'special special-'+getOdd(i)">
+        <div class="special-img">
+            <a [routerLink]="'/coupon/'+a.id">
+                <img [src]="a.imageUrl" />
+            </a>
+        </div>
+        <div class="special-items">
+            <h2 class="scroll-reveal" data-origin="top" data-distance="20%">{{a.title}}</h2>
+            <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+            <span class="scroll-reveal" data-origin="bottom" data-distance="60%">{{a.price | currency}}</span>
+        </div>
+    </div>
+</div>

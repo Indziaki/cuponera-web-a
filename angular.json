@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cuponera-web"
+    }
+  },
+  "defaultProject": "cuponera-web",
+  "cli": {
+    "analytics": false
+  }
 }

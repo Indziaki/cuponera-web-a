@@ -1,1 +1,218 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cuponera-web-primary: mat-palette($mat-indigo);
+$cuponera-web-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$cuponera-web-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$cuponera-web-theme: mat-dark-theme($cuponera-web-primary, $cuponera-web-accent, $cuponera-web-warn);
+$primary-color: #4ecec1;
+$accent-color: #006f91;
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cuponera-web-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url(assets/BebasNeue-Regular.ttf);
+}
+html, body { height: 100%; }
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(0,111,145);
+  background: linear-gradient(180deg, rgba(0,111,145,1) 0%, rgba(78,206,193,1) 100%);
+}
+*{
+  font-family: Lato;
+}
+p{
+  font-family: Lato !important;
+  color: white;
+}
+h1,h2,h3,h4,h5, button, .menu-item .mat-button-wrapper{
+  font-family: 'BebasNeue' !important;
+}
+.mat-h1, h1{
+  color: white;
+}
+.home-menu{
+  position: fixed;
+  width: calc(100% - 30px) !important;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  transition: background-color 0.5s ease;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+.center{
+  text-align: center;
+}
+.background-container{
+  margin: 15px;
+  height: calc(100vh - 30px);
+  position: fixed;
+  width: calc(100vw - 30px);
+  background-color: #090909;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+.container {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.accent{
+  background: $accent-color;
+  color: white;
+}
+.flex-container{
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.sticky{
+  background-color: rgba(0,0,0,0.8);
+}
+.feature-item{
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.feature-item img{
+  max-width: 100px;
+}
+.section-header{
+  padding: 10px;
+  text-align: center;
+}
+.padding{
+  padding: 15px;
+}
+.mat-button.menu-item{
+  display: none;
+  font-size: 18px;
+}
+.mat-icon-button.menu-mobile{
+  display: block;
+}
+@media print, screen and (min-width: 40em) {
+  .flex-container {
+    flex-direction: row;
+  }
+  .mat-button.menu-item{
+    display: block;
+  }
+  .mat-icon-button.menu-mobile{
+    display: none;
+  }
+}
+.coupon-header{
+  position: relative;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.coupon-header img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.coupon-header:after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+}
+.coupon-header h1{
+  color: white;
+  z-index: 1;
+  bottom: 1.5em;
+  position: absolute;
+  width: 100%;
+}
+.coupon-content{
+  display: flex;
+  flex-direction: column;
+}
+.coupon-content > *{
+  margin: 15px;
+  background-color: #121D26;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.coupon-content .right-card{
+  background-color: #121D26;
+  color: white;
+}
+.coupon-content .right-card img{
+  width: 70px;
+  text-align: right;
+}
+.right-card button{
+  background: #4dccc0;
+  margin: 0 auto;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+}
+.promo-info{
+  text-align: left;
+  padding: 25px 0;
+}
+.promo-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price{
+  font-size: 35px;
+}
+@media print, screen and (min-width: 40em) {
+  .coupon-header{
+      height: 70%;
+  }
+  .coupon-content {
+    flex-direction: row;
+  }
+  .coupon-content .left-card{
+      width: 60%;
+  }
+  .coupon-content .right-card{
+      width: 40%;
+  }
+}

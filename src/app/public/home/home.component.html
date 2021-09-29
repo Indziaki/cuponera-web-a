@@ -1,0 +1,25 @@
+<div class="container">
+    <carousel [slides]="slides"></carousel>
+</div>
+<div class="accent center padding">
+    <h1>Negocios asociados</h1>
+    <div class="flex-container">
+        <div *ngFor="let b of businessList" class="feature-item">
+            <img [src]="b.logoUrl" />
+        </div>
+    </div>
+</div>
+<div class="padding">
+    <app-coupons></app-coupons>
+</div>
+
+
+<section id="about-us" class="about">
+    <div class="container">
+        <div class="about-content">
+            <h1 align="center">Nosotros</h1>
+            <p>Misión</p>
+            <p class="scroll-reveal" data-origin="top" data-distance="10%">Fortalecer la economía familiar y crear empleos.</p>
+        </div>
+    </div>
+</section>
