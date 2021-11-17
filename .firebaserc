@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gasapp-1541040572916": {
+      "hosting": {
+        "cuponera-web": [
+          "gasapp-1541040572916"
+        ]
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://coupon-box-api-dev.azurewebsites.net/api/'
+  api: 'https://cuponera-api.azurewebsites.net/api/'
 };
 
 /*

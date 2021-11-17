@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'contactus',
     component: ContactComponent
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   }
 ];
 
